@@ -11,8 +11,8 @@ The wrapper launches Element Desktop with Chrome DevTools Protocol (CDP) debuggi
 ### Linux (Arch example)
 
 ```bash
-sudo pacman -S python python-pip element-desktop
-pip install websockets requests pynput --break-system-packages
+sudo pacman -S python element-desktop python-requests python-websockets
+yay -S python-pynput
 ```
 
 ### Windows
@@ -39,6 +39,22 @@ On Windows, run:
 
 ```powershell
 py .\element-ptt.py
+```
+
+### KDE shortcut with env vars (Linux)
+
+Set your `.desktop` file `Exec=` to:
+
+```ini
+Exec=env PTT_BUTTON=button8 DEBUG_PORT=9222 GRACE_PERIOD=0.2 /usr/bin/env python3 /home/YOUR_USER/.local/bin/element-ptt.py
+```
+
+### Windows shortcut with env vars
+
+Set the shortcut **Target** to:
+
+```text
+C:\Windows\System32\cmd.exe /C "set PTT_BUTTON=button8 && set DEBUG_PORT=9222 && set GRACE_PERIOD=0.2 && py C:\Users\YOUR_USER\element-ptt.py"
 ```
 
 ## Configuration
