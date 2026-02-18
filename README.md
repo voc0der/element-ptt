@@ -17,6 +17,8 @@ pip install websockets requests pynput --break-system-packages
 
 ### Windows
 
+If `py` is missing, install Python for Windows: https://www.python.org/downloads/windows/
+
 ```powershell
 py -m pip install websockets requests pynput
 # Install Element Desktop from https://element.io/download
@@ -32,8 +34,6 @@ chmod +x ~/.local/bin/element-ptt.py
 # Run
 python3 ~/.local/bin/element-ptt.py
 ```
-
-Optional on Linux: `./element-ptt.sh` is a thin wrapper that just runs `element-ptt.py`.
 
 On Windows, run:
 
